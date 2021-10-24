@@ -4,6 +4,13 @@ export const Container = styled.div`
 
 h1 {
     font: 2.5em "Bebas Neue";
+    padding: 0em 0.5em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0.5em;
 }
 
 .box-cadastro {
@@ -12,13 +19,17 @@ flex-direction: row;
 }
 
 .box-acoes {
-    padding: 0em 5em;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 3em;
     align-items: center;
     align-content: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 input, select {
-  width: 15em;
+  width: 29em;
   height: 1.75em;
   border-radius: 5px;
   outline: 0;
@@ -26,11 +37,11 @@ input, select {
 }
 
 .cadastrar, .cancelar{
-    padding: 1em;
+    padding: 1.5em;
 }
 
 .cadastrar button {
-width: 9em;
+width: 10em;
 background-color: #5EC5FF;
 border: 0px;
 border-radius: 4px;
@@ -38,7 +49,7 @@ font: 1em "Bebas Neue";
 }
 
 .cancelar button {
-width: 9em;
+width: 10em;
 background-color: #FF5E5E;
 border: 0px;
 border-radius: 4px;
@@ -59,12 +70,18 @@ justify-content: center;
 }
 
 .link input {
-    width: 33.5em;
+    width: 62em;
 }
 
 textarea {
-    width: 33.5em;
+    width: 62em;
     height: 8em;
     resize: none;
+}
+
+.imagem img {
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
 }
 `
