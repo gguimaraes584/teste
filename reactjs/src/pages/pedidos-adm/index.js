@@ -3,10 +3,11 @@ import {Container} from './styled';
 export default function PedidosAdmin () {
     return (
         <Container>
+        <div className="container">
         <thead>
             <div className="pesquisar">
-                <img src="./public/assets/images/search.svg" alt="" />
-                PESQUISAR PRODUTO
+                <img src="/assets/images/search" alt=""/>
+                <input type="search" placeholder="PESQUISAR PEDIDO"/>
             </div>
             
             <th>ID DO CLIENTE</th>
@@ -117,7 +118,7 @@ export default function PedidosAdmin () {
             <td>04517-199</td>
             <td>EM ANDAMENTO</td>
         </tr>
-
+        </div>
         </Container>
     )
 }

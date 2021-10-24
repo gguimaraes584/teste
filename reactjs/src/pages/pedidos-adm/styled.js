@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import '../../index.css';
 
-const Container = styled.div`
+export const Container = styled.div`
+.container {
     display: flex;
     flex-direction: column;
+    align-content: space-evenly;
+}
+    
     
 
     thead {
@@ -12,13 +16,13 @@ const Container = styled.div`
     }
 
     th {
-        font: 1.30em "Bebas Neue";
-        padding: 0.5em 2.45em;
+        font: 1.4em "Bebas Neue";
+        padding: 1em 2.0em;
     }
 
     td {
-        text-align: center;
-        padding: 1em 3.47em;
+        flex-direction: row;
+        padding: 1em 3.2em;
         font: 400 1.22em "Oswald";
     }
 
@@ -29,12 +33,36 @@ const Container = styled.div`
         justify-items: center;
     }
 
-    .pesquisar {
-        width: 20em;
+    input {
+        display: flex;
         background-color: white;
+        
+        align-content: flex-end;
+        align-items: center;
+
+        margin-right: 0.7em;
+
+        width: 20em;
+        padding: 0.1em;
         border-radius: 1.5em;
+        border: none;
+
         font: 1em "Bebas Neue";
     }
-`
 
-export {Container}
+    input::-webkit-input-placeholder {
+    text-align: right;
+}
+
+    .pesquisar {
+        display: flex;
+        align-items: flex-end;
+        margin-left: 0.5em;
+    }
+
+    .pesquisar img {
+        display: flex;
+        position: absolute;
+        align-items: center;
+    }
+`
