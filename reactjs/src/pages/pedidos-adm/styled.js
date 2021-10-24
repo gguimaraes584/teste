@@ -54,15 +54,14 @@ export const Container = styled.div`
     text-align: right;
 }
 
-    .pesquisar {
+    .pesquisar, .pesquisar input{
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         margin-left: 0.5em;
     }
 
     .pesquisar img {
-        display: flex;
-        position: absolute;
+        position: relative;
         align-items: center;
     }
 `
