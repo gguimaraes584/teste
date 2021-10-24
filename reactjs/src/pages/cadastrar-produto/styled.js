@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
+h1 {
+    font: 2.5em "Bebas Neue";
+}
+
 .box-cadastro {
 display: flex;
 flex-direction: row;
@@ -9,6 +13,8 @@ flex-direction: row;
 
 .box-acoes {
     padding: 0em 5em;
+    align-items: center;
+    align-content: center;
 }
 
 input, select {

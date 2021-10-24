@@ -79,7 +79,7 @@ export default function CadastrarProduto () {
 
                         <div className="box-acoes">
                             <div className="imagem">
-                                <img src="./public/assets/images/aaa.png" alt=""/>
+                                <img src="/assets/images/calcado.svg" alt=""/>
                             </div>
 
                             <div className="cadastrar">
