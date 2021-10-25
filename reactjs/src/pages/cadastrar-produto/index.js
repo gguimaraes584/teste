@@ -1,9 +1,29 @@
 import { Container } from "./styled";
 import { Titulo } from "../../components/titulo/styled";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import Api from "../../service/api";
+import { useState, useEffect } from "react";
+
+const api = new Api();
+
+export default function Index() {
+    const [produto, setProduto] = useState([]);
+    
+}
+
+
+
+
+
+
 export default function CadastrarProduto () {
+    
     return (
         <Container>
+
 
 
             <div className="container">
