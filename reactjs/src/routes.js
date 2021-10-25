@@ -36,7 +36,7 @@ export default function Final() {
             <Route path='/produtos-todos' component={ProdutosTodos}/>
             <Route path='/admin/login' component={LoginAdm}/>
             <Route path='/pedidos' component={Pedidos}/>
-            <Route path='/registrar-user' component={registrarUser}/>
+            <Route path='/registrar' component={registrarUser}/>
             <Route path='/admin/pedidos' component={PedidosAdmin}/>
             <Route path='/admin/cadastrar' component={CadastrarProduto}/>
         </Switch>
