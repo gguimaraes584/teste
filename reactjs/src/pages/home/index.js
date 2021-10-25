@@ -51,7 +51,7 @@ export default function Index() {
 
         <div class="faixa-4">
             <div class="geral-fut">
-            <div class="fut">Futebol</div>
+            <div class="fut">Todos os Produtos</div>
             <div class="img-fut">
                 <Link to='/produtos-todos'>
                     <img src="./assets/images/barca.svg" alt="" />
@@ -59,7 +59,7 @@ export default function Index() {
                 </div>
             <div class="desc-fut">
                 <div class="vis">
-                VISTA-SE PARA REPRESENTAR E TORCER PELO SEU TIME FAVORITO
+                VISTA-SE PARA ANDAR COM O MAIOR ESTILO NO MUNDO
                 </div>
             </div>
             </div>
