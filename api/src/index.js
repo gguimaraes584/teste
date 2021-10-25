@@ -18,21 +18,16 @@ app.get('/produto', async (req, resp) => {
 
 app.post('/produto', async (req, resp) => {
     try {
-        let {nome, categoria, precode, precopor, avaliacao, descricao, estoque, linkimg} = req.body;
-        let produtoOK = await db.infoa_dtn_tb_produto.findOne({ where: { nm_produto: nome}})
-        if(produtoOK !== null)
-            return resp.send({ erro: '  PRODUTO JÁ INSERIDO '})
+        let {nome, descricao, categoria, preco, tamanho, img} = req.body;
+
         let r = await db.infoa_dtn_tb_produto.create({
             nm_produto: nome,
+            ds_titulo: nome,
+            ds_descricao: descricao,
             ds_categoria: categoria,
-            vl_preco_de: precode,
-            vl_preco_por: precopor,
-            vl_avaliacao: avaliacao,
-            ds_produto: descricao,
-            qtd_estoque: estoque,
-            img_produto: linkimg,
-            bt_ativo: 1,
-            dt_inclusao: new Date()
+            vl_preco: preco,
+            id_tamanho: tamanho,
+            img_imagem: img
         })
         resp.send(r);
 

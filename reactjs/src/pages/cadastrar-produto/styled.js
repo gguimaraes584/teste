@@ -49,6 +49,7 @@ background-color: #5EC5FF;
 border: 0px;
 border-radius: 4px;
 font: 1em "Bebas Neue";
+cursor: pointer;
 }
 
 .cancelar button {
@@ -57,6 +58,7 @@ background-color: #FF5E5E;
 border: 0px;
 border-radius: 4px;
 font: 1em "Bebas Neue";
+cursor: pointer;
 }
 
 .identificacao, .dados, .opcoes, .opcoes2 {

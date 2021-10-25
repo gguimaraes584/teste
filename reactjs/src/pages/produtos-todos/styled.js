@@ -59,6 +59,7 @@ const Container = styled.div`
   color: #EEF2F2;
 }
 
+
 .box {
   padding: 0.3em;
   border: solid gray 1px;
