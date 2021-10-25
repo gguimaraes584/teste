@@ -15,12 +15,12 @@ export default class Api {
     }
 
     async alterar(id, nome, categoria, avaliacao, precode, precopor, estoque, linkimg, descricao) {
-       let r = await api.put('/produto/' + id, {nome, categoria, avaliacao, precode, precopor, estoque, linkimg, descricao});
+       let r = await api.put(`/produto/${id}`, {nome, categoria, avaliacao, precode, precopor, estoque, linkimg, descricao});
        return r.data;
     }
 
     async remover(id){
-        let r = await api.delete('/produto/' + id );
+        let r = await api.delete(`/produto/${id}`);
         return r.data; 
     }
 }
