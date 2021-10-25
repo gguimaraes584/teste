@@ -10,12 +10,15 @@ h1 {
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 1em 0.5em;
 }
 
 .box-cadastro {
 display: flex;
 flex-direction: row;
+align-items: center;
+justify-content: center;
 }
 
 .box-acoes {

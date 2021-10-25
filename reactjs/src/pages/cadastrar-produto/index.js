@@ -12,18 +12,6 @@ export default function CadastrarProduto () {
                             
                             <div className="box-info">
 
-                                    <div className="identificacao">
-                                        <div class="id">
-                                            ID DO PRODUTO:
-                                            <input type="text"/>
-                                        </div>
-
-                                        <div className="cd-interno">
-                                            CÓDIGO DO PRODUTO:
-                                            <input type="text"/>
-                                        </div>
-                                    </div>
-
                                     <div className="dados">
                                         <div className="nome">
                                             NOME DO PRODUTO:
