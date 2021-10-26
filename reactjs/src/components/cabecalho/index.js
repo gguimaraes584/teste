@@ -17,7 +17,7 @@ export default function Cabecalho() {
                 <div class="menu-item"><Link to='/produtos-infantis'> Infantil</Link></div>
             </div>
             <div class="menu-botao">
-                <Link to='http://localhost:3000/carrinho'><button><img src="https://s3-alpha-sig.figma.com/img/d2fc/4c61/d7f60fb532ee1effc5efe77c5a2dc402?Expires=1633910400&Signature=MWOYA7j9HoCakMJkQ8rxhtXn8wQEGrbJkdyODjfCQmewYMPjvxnsGQlm0a-3usoW4YFUeUtjVUPxqJnwAS0PmUNIb2paT7bijZlKpG8Rn~S27DMOEwuZvCZEpE3qt91rv~Cw-CeA7BZMLyqzxbXI9jd616gFnf7b2dFtAmseoDWkf1oq2tf5DKxETGZnxZuh3fmjqTJX-s7vdolVaksFZVN5slx59YsF-GLK2Zb9e2YGDMOOPvZxTioVfnU8ibTSL5v~Gii7MJlQ9CTCFBqjxMs~STAys2AuFOBKPQomK85U-QPI6DtEzUZPGTV2sKMOK4z9ncDuVMoF05pbckC87g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" alt="" width='20px' /></button></Link>
+                <Link to='/carrinho'><button><img src="/assets/images/carrinhoo.svg" alt="" width='20px' /></button></Link>
             </div>
         </CabecalhoDiv>
     )
