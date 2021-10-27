@@ -33,13 +33,14 @@ const Container = styled.div `
     
     margin-left: 15px;
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 
-.valor{
-    padding-top: 50px;
-    margin-left: 100px;
-    font-size: 20px;
-}
+
+
+
 `
 export {Container}

@@ -1,4 +1,5 @@
 import { Container } from './styled';
+import Contador from "../../components/contador";
 
 export default function carrinho(){
     return(
@@ -14,6 +15,9 @@ export default function carrinho(){
                  <form> <input type="checkbox" name="presente" value="presente"/> Para Presente </form>
                   <div className="valor">R$ 279,99</div>
                   <div class="quantidade">
+                  <Contador>
+                  
+                  </Contador>
                      
                 </div>
               </div>

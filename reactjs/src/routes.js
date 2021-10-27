@@ -19,6 +19,7 @@ import PedidosAdmin from './pages/pedidos-adm';
 import CadastrarProduto from './pages/cadastrar-produto';
 import carrinho from './pages/carrinho';
 
+
 export default function Final() {
     return (
     <BrowserRouter>
@@ -41,6 +42,7 @@ export default function Final() {
             <Route path='/admin/pedidos' component={PedidosAdmin}/>
             <Route path='/admin/cadastrar' component={CadastrarProduto}/>
             <Route path='/carrinho' component={carrinho}/>
+            
         </Switch>
     </BrowserRouter>
     )
