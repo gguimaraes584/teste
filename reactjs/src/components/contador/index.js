@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 export default function Contador(){
  const [contador, setContador] = useState(0);
  
@@ -22,7 +23,7 @@ export default function Contador(){
   }
   
   return (
-    
+       
        <ContadorDiv> {contador}  
        <ToastContainer> </ToastContainer>
        <button onClick={adicionar}> + </button>

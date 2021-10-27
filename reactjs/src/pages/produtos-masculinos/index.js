@@ -1,5 +1,6 @@
 import { Container } from "../produtos-femininos/styled";
 import Cabecalho from "../../components/cabecalho";
+import carrinho from "../carrinho";
 
 export default function Masculinos() {
   return (
@@ -37,7 +38,7 @@ export default function Masculinos() {
           <div class="valor">R$ 314,99</div>
           <div class="parcelamento">ou 7x de R$ 45,00</div>
           <div class="adc-carrinho">
-            <button> Adicionar ao carrinho </button>
+            <button onClick={carrinho}> Adicionar ao carrinho </button>
           </div>
         </div>
         <div class="box">

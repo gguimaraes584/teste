@@ -1,9 +1,11 @@
 import { Container } from './styled';
 import Contador from "../../components/contador";
+import Cabecalho from "../../components/cabecalho";
 
 export default function carrinho(){
     return(
         <Container>
+          <Cabecalho/>
             <div className="meu-ca"> Meu Carrinho </div>
         <div className="geral-ca"> 
     
