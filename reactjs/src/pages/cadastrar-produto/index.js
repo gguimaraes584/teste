@@ -20,7 +20,7 @@ export default function CadastrarProduto () {
     const [ desc, setDesc ] = useState ('')
 
     async function inserir() {
-        if (nome !=='' && preco > 0 && categoria !=='' && tamanho > 0 && tamanho < 2 && img !=='' && desc !=='')
+        if (nome !=='' && preco > 0 && categoria !=='' && img !=='' && desc !=='' && tamanho > 0 && tamanho < 26 || tamanho > 25 && tamanho < 34 )
             {
                 let r = await api.inserir(nome, desc, categoria, preco, tamanho, img);
                 if (r.erro)

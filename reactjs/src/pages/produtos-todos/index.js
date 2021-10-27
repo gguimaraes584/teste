@@ -10,8 +10,9 @@ export default function ProdutosTodos() {
   const [produto, setProduto] = useState([]); 
 
   const listar = async() => {
-    const produto = await api.listar;
-    setProduto(produto);
+    const produtosr = await api.listar();
+    setProduto(produtosr);
+    console.log(setProduto)
   }
 
   useEffect(() => { 
