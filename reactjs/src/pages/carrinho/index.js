@@ -13,13 +13,20 @@ export default function carrinho(){
                 <div className="titulo-produto">Camisa São Paulo II 2021</div>   
                  <div className="vend"> Vendido e entregue por Destiny</div>
                  <form> <input type="checkbox" name="presente" value="presente"/> Para Presente </form>
-                  <div className="valor">R$ 279,99</div>
-                  <div class="quantidade">
+                  
+                 <div className="geral-vl">                 
+                
+                  <div className="valor">R$ 279,99 </div>
                   <Contador>
                   
                   </Contador>
+
+                 </div>
+                  
+                  
+                  
                      
-                </div>
+                 
               </div>
                 
 

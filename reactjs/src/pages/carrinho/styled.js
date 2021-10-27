@@ -35,7 +35,12 @@ const Container = styled.div `
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    
+
+}
+
+.geral-vl{
+    display: flex;
+    flex-direction: column;
 }
 
 
