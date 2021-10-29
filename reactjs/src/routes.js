@@ -18,7 +18,8 @@ import registrarUser from './pages/registrar-user';
 import PedidosAdmin from './pages/pedidos-adm';
 import CadastrarProduto from './pages/cadastrar-produto';
 import carrinho from './pages/carrinho';
-
+import ClientesAdm from './pages/clientes-adm';
+import Enderecos from './pages/meus-endereços';
 
 export default function Final() {
     return (
@@ -42,6 +43,9 @@ export default function Final() {
             <Route path='/admin/pedidos' component={PedidosAdmin}/>
             <Route path='/admin/cadastrar' component={CadastrarProduto}/>
             <Route path='/carrinho' component={carrinho}/>
+            <Route path='/admin/cliente'component={ClientesAdm}/>
+            <Route path='/meus-endereços'component={Enderecos}/>
+            
             
         </Switch>
     </BrowserRouter>
