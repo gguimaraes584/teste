@@ -11,6 +11,7 @@ export default function Parcelamento () {
 
                 <div className="box-container"> 
 
+                
                     <div className="box-p-b"> 
                         
                     <div className="box-endereços">
