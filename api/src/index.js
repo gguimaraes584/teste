@@ -7,9 +7,9 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get('/produto', async (req, resp) => {
+app.get('/produto/:categoria', async (req, resp) => {
     try {
-        let a = await db.infoa_dtn_tb_produto.findAll({ order: [['id_produto', 'desc']]})
+        let a = await db.infoa_dtn_tb_produto.findAll ({order: [['id_produto', 'desc']]});
         resp.send(a);
     } catch (e) {
         resp.send({erro: e.toString()});

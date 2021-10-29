@@ -55,13 +55,13 @@ export default function Masculinos() {
         {produto.map((item) =>
           <div class="box">
             <div class="prod">
-              <img src={item.infoa_dtn_tb_produto.img_imagem} alt=''/>
-            </div>
-            <div class="nome-produto">{item.infoa_dtn_tb_produto.nm_produto}</div>
-            <div class="valor">{item.infoa_dtn_tb_produto.vl_preco}</div>
-            <div class="parcelamento">ou 7x de R$ 45,00</div>
-            <div class="adc-carrinho">
-              <button onClick={carrinho}> Adicionar ao carrinho </button>
+                <img src={item.img_imagem} alt=''/> 
+                <div class="nome-produto">{item.nm_produto}</div>
+                <div class="valor">{item.vl_preco}</div>
+                <div class="parcelamento">ou 7x de R$ 45,00</div>
+                <div class="adc-carrinho">
+                    <button> Adicionar ao carrinho </button>
+                </div>
             </div>
           </div>
         )}

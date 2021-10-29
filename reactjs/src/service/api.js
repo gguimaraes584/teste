@@ -4,8 +4,8 @@ const api = axios.create({
 })
 
 export default class Api {
-    async listar(){
-        let r = await api.get('/produto');
+    async listar(categoria){
+        let r = await api.get(`/produto/${categoria}`);
         return r.data;
     }
 
