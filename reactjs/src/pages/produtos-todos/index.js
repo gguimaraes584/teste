@@ -50,15 +50,15 @@ export default function ProdutosTodos() {
       <div class="container-produto">
         {produto.map((item) =>
           <div class="box">       
-              <div class="prod">
-                  <img src={item.img_imagem} alt=''/> 
-                  <div class="nome-produto">{item.nm_produto}</div>
-                  <div class="valor">{item.vl_preco}</div>
-                  <div class="parcelamento">ou 7x de R$ 45,00</div>
-                  <div class="adc-carrinho">
-                    <button> Adicionar ao carrinho </button>
-                  </div>
-              </div>
+            <div class="prod">
+                <img src={item.img_imagem} alt=''/> 
+                <div class="nome-produto">{item.nm_produto}</div>
+                <div class="valor">{item.vl_preco}</div>
+                <div class="parcelamento">ou 7x de R$ 45,00</div>
+                <div class="adc-carrinho">
+                  <button> Adicionar ao carrinho </button>
+                </div>
+            </div>
           </div>
         })
       </div>
