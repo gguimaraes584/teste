@@ -11,7 +11,7 @@ export default function Parcelamento () {
 
                 <div className="box-container"> 
 
-                
+
                     <div className="box-p-b"> 
                         
                     <div className="box-endereços">
@@ -38,7 +38,7 @@ export default function Parcelamento () {
                                         <div className="opcao">
                                             <input type="radio"/>
                                              <div>São Paulo, São Paulo — CEP XXXXX-XXX</div> 
-                                             <div>Destinatário — (11) 9 XXXX-XXXX</div>
+                                             <div>Destinatário — (12) 9 XXXX-XXXX</div>
                                              <div>
                                                <div>EDITAR</div>
                                                <div>ADICIONAR INSTRUÇÕES DE ENTREGA</div>
