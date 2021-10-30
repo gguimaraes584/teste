@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import '../../index.css';
 
 export const Container = styled.div`
 .container {

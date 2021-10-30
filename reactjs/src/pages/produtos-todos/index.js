@@ -60,7 +60,7 @@ export default function ProdutosTodos() {
                 </div>
             </div>
           </div>
-        })
+        )}
       </div>
     </Container>
   );

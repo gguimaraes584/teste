@@ -24,11 +24,21 @@ export default function Contador(){
   
   return (
        
-       <ContadorDiv> {contador}  
-       <ToastContainer> </ToastContainer>
-       <button onClick={adicionar}> + </button>
-       <button onClick={remover}> -  </button> 
-       </ContadorDiv> 
+        <ContadorDiv>
+          
+          <div className="menos" onClick={remover}>
+            -
+          </div>
     
+          <div className="quantidade">
+            {contador}
+          </div>
+    
+          <div className="mais" onClick={adicionar}>
+            +
+          </div>
+          
+        </ContadorDiv>
+       
   )
 }

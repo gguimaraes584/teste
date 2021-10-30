@@ -15,10 +15,10 @@ import ProdutosTodos from './pages/produtos-todos';
 import LoginAdm from './pages/login-adm';
 import Pedidos from './pages/pedidos';
 import registrarUser from './pages/registrar-user';
-import PedidosAdmin from './pages/pedidos-adm';
+import PedidosAdmin from './pages/admin/pedidos-adm';
 import CadastrarProduto from './pages/cadastrar-produto';
-import carrinho from './pages/carrinho';
-import ClientesAdm from './pages/clientes-adm';
+import Carrinho from './pages/carrinho';
+import ClientesAdm from './pages/admin/clientes';
 import Enderecos from './pages/meus-endereços';
 
 export default function Final() {
@@ -42,7 +42,7 @@ export default function Final() {
             <Route path='/registrar' component={registrarUser}/>
             <Route path='/admin/pedidos' component={PedidosAdmin}/>
             <Route path='/admin/cadastrar' component={CadastrarProduto}/>
-            <Route path='/carrinho' component={carrinho}/>
+            <Route path='/carrinho' component={Carrinho}/>
             <Route path='/admin/cliente'component={ClientesAdm}/>
             <Route path='/meus-endereços'component={Enderecos}/>
             

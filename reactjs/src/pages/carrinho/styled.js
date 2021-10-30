@@ -1,51 +1,127 @@
-import styled from "styled-components"; 
+import styled from 'styled-components';
 
-const Container = styled.div `
+export const Container = styled.div`
 
 
-.meu-ca{
-    color: black;
-    padding-top: 15px;
-    font-family: "Bebas Neue";
-    font-size: 32px;
-    text-align: center;
+.resumo {
+    font: 200 1.2em "Bebas Neue";
 }
 
-.titulo-produto{
-    font-size: 21px;
+.subtotal span {
+    margin-left: 7em;
 }
 
-.geral-ca{
+.desconto span {
+    margin-left: 10.5em;
+}
+
+.total span {
+    margin-left: 9em;
+}
+
+.finalizar button {
+    margin: 1em;
+    padding: 0.1em;
+    width: 15em;
+    background-color: #5EC5FF;
+    border: none;
+    outline: none;
+    font: 1.2em "Bebas Neue";
+}
+
+.continuar button {
+    margin: 1em;
+    padding: 0.1em;
+    width: 15em;
+    background-color: #C4C4C4;
+    border: none;
+    outline: none;
+    font: 1.2em "Bebas Neue";
+}
+
+.resumo {
+    margin: 0em 5em;
+}
+
+.resumo > div {
+    padding: 1em;
+}
+
+.conteudo {
     display: flex;
     flex-direction: row;
-    font-family: "Bebas Neue";
-    padding-left: 34px;
-    
-    
+    margin: 0em 1em;
+    align-content: center;
 }
 
-.vend{
-    color: gray;
-    
+.conteudo > div {
+    padding: 0em 2em;
 }
 
-.textos{
-    
-    margin-left: 15px;
-    margin-top: 40px;
+.titulo-produto, .subtotal, .desc, .total, .desconto {
+    font: 400 1.25em "Bebas Neue";
+}
+
+.info {
+    font: 1.2em "Oswald";
+}
+
+.info span {
+    font: 800 1em "Oswald";
+}
+
+.vl-preco {
+    font: 1em "Bebas Neue";
+}
+
+.frete h1 {
+    font: 1.2em "Bebas Neue";
+}
+
+.frete button {
+    margin: 1em;
+    padding: 0.1em;
+    width: 10em;
+    background-color: #5EC5FF;
+    border: none;
+    outline: none;
+    font: 1.2em "Bebas Neue";
+}
+
+.frete input {
+    width: 15em;
+    padding: 0.5em;
+    background-color: #C4C4C4;
+    border: none;
+    outline: none;
+}
+
+.desc {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.info {
     display: flex;
     flex-direction: column;
-
+    padding: 0.5em;
 }
 
-.geral-vl{
+.info-row > div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+.pedido-imagem {
+    display: flex;
+    flex-direction: row;
 }
 
+.pedido-imagem img {
+    height: 180px;
+}
 
-
-
-
+.conteudo2 {
+    margin-top: 5em;
+}
 `
-export {Container}

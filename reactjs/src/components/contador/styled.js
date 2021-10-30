@@ -1,19 +1,29 @@
 import styled from 'styled-components'
 
 
-const ContadorDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const ContadorDiv = styled.div`
+ display: flex;
+  flex-direction: row;
+  font-weight: 400;
 
-  padding: 2em 5em;
+  & > * {
+    margin: .5em;
+    background-color: #f5f5f5;
+    padding: 0.3em .8em;
+    user-select: none;
+  }
 
-  .itens {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  .menos {
+    border-radius: 100%;
+    cursor: pointer;
+  }
+
+  .quantidade {
+    padding: 0.3em 1em;
+  }
+
+  .mais {
+    border-radius: 100%;
+    cursor: pointer;
   }
 `
-
-
-export { ContadorDiv }
