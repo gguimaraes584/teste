@@ -21,6 +21,8 @@ import Carrinho from './pages/purchaseData/carrinho';
 import ClientesAdm from './pages/admin/clientes';
 import Enderecos from './pages/purchaseData/endereço/meus-endereços';
 
+import Produtos from  './pages/admin/produtos/products/index'
+
 export default function Final() {
     return (
     <BrowserRouter>
@@ -48,6 +50,7 @@ export default function Final() {
             <Route path='/admin/cadastrar' component={CadastrarProduto}/>
             <Route path='/admin/cliente'component={ClientesAdm}/>
             <Route path='/admin/pedidos' component={PedidosAdmin}/>
+            <Route path='/admin/produtos' component={Produtos}/>
         </Switch>
     </BrowserRouter>
     )

@@ -205,6 +205,10 @@ button:hover {
   opacity: 0.6;
   color: black;
 }
+
+button:visited {
+  text-decoration: none;
+}
 `
 
 export {Container}
