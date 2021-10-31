@@ -36,6 +36,10 @@ td {
     background-color: #f9f9f9;
 }
 
+input::-webkit-input-placeholder {
+    text-align: right;
+}
+
 .a {
     display: flex;
     flex-direction: row;
@@ -47,12 +51,13 @@ button, input {
     text-decoration: none;
     border-radius: 20px;
     background-color: white;
-    font: 1.15em "Bebas Neue";
+    font: 1em "Bebas Neue";
     padding: 0em 2em;
     outline: none;
     text-decoration: none;
     border: none;
     cursor: pointer;
+    width: 15em;
 }
 
 button:link {
