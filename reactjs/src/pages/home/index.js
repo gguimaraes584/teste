@@ -2,7 +2,7 @@ import Cabecalho from '../../components/cabecalho/index.js'
 import { Link } from 'react-router-dom'
 import { Container } from './styled'
 
-export default function Index() {
+export default function Home () {
     
     return (
     <Container>

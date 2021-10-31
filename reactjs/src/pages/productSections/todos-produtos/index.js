@@ -1,8 +1,8 @@
-import Cabecalho from "../../components/cabecalho";
+import Cabecalho from "../../../components/cabecalho";
 import { Container } from "../produtos-femininos/styled";
 import { useState, useEffect } from "react";
 
-import Api from "../../service/api";
+import Api from "../../../service/api";
 const api = new Api();
 
 export default function ProdutosTodos() {

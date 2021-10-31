@@ -1,6 +1,6 @@
 import {Container} from './styled';
-import Cabecalho from '../../components/cabecalho/index';
-import { Button } from '../../components/button/styled';
+import Cabecalho from '../../../components/cabecalho/index';
+import { Button } from '../../../components/button/styled';
 
 export default function Pagamento () {
     return (

@@ -1,9 +1,9 @@
 
 import { Container } from "./styled";
-import { Button } from "../../components/button/styled";
-import { Input } from "../../components/input/styled";
+import { Button } from "../../../components/button/styled";
+import { Input } from "../../../components/input/styled";
 
-export default function LoginAdm() {
+export default function LoginAdmin () {
     return(
         <Container>
             

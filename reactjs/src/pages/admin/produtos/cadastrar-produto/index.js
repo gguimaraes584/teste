@@ -1,10 +1,10 @@
 import { Container } from "./styled";
-import { Titulo } from "../../components/titulo/styled";
+import { Titulo } from "../../../../components/titulo/styled";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Api from "../../service/api";
+import Api from "../../../../service/api";
 import { useState} from "react";
 
 const api = new Api();

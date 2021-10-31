@@ -1,4 +1,4 @@
-import Cabecalho from "../../components/cabecalho";
+import Cabecalho from "../../../components/cabecalho";
 import { Container } from "./styled";
 
 export default function sobreNos() {

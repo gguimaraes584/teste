@@ -1,9 +1,8 @@
 import { Container } from "../produtos-femininos/styled";
-import Cabecalho from "../../components/cabecalho";
-import carrinho from "../carrinho";
+import Cabecalho from "../../../components/cabecalho";
 import { useState, useEffect } from "react";
 
-import Api from "../../service/api";
+import Api from "../../../service/api";
 
 
 const api = new Api();
