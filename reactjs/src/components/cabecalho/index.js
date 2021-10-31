@@ -1,13 +1,12 @@
 import { CabecalhoDiv } from "./styled";
 import { Link } from 'react-router-dom'
-import logoSite from '../../assets/images/logo.svg'
 
 export default function Cabecalho() {
     return (
         <CabecalhoDiv>
             <div class="logo">
                 <Link to='./'>
-                <img src={logoSite} alt="" width="100px" height="50px" />
+                <img src="../../assets/images/logo.svg" alt=""/>
                 </Link>
             </div>
             <div class="menu">

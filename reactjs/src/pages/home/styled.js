@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import logoFundo from '../../assets/images/fundo.png'
 const Container = styled.div `
     ::-webkit-scrollbar-track
     {
@@ -25,7 +24,7 @@ const Container = styled.div `
         justify-content: center;
         padding: 0em 5em;
 
-        background-image: url(${logoFundo});
+        background-image: url('../../assets/images/fundo.png');
         
         
         background-repeat: no-repeat;
