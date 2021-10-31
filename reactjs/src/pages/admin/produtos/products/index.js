@@ -6,12 +6,13 @@ export default function Produtos () {
         <Container>
 
             <div className="conteudo">
+
                         <div className="a">
 
                     
                         <div className="botao1">
                              <button>
-                                 <Link to ="/admin/cadastrar">
+                                 <Link to ="/admin/cadastrar" style={{textDecoration: "none"}}>
                                  ADICIONAR NOVO PRODUTO
                                  </Link></button>
                          </div>
@@ -20,7 +21,6 @@ export default function Produtos () {
                             <img src="../../../../../public/assets/search.svg" alt=""/>
                         </div>
                         </div>
-
                 <table>
                 <thead className="cabecalho">
                 <tr>

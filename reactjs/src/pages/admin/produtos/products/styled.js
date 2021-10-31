@@ -44,6 +44,7 @@ td {
   }
 
 button, input {
+    text-decoration: none;
     border-radius: 20px;
     background-color: white;
     font: 1.15em "Bebas Neue";
@@ -52,5 +53,12 @@ button, input {
     text-decoration: none;
     border: none;
     cursor: pointer;
+}
+
+button:link {
+    text-decoration: none;
+}
+button:visited {
+    color: black;
 }
 `
