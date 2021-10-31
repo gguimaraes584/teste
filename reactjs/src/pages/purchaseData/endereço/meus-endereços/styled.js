@@ -1,32 +1,15 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-body {
-    margin: 0%;
-    height: 100vh;
-    width: 100vw;
+
+.box-p-b {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-hr {
-    color: "#a9a9a9";
-    background-color: "a9a9a9";
-    width: 450%;
-}
-
-
-
-.hr2 {
-    width:100%;
-}
-
-.opcao {
-    margin-top: 0.5em;
-    align-items: center;
-    align-content: center;
+.box-p-b > div {
+padding: 1em;
 }
 
 .titulo-pagina {
@@ -35,154 +18,81 @@ hr {
     text-align: center;
 }
 
-.preco {
-    padding-left: 6em;
+.endereço > div {
+padding: 0.5em;
+font: 1.5em "Bebas Neue"; 
 }
 
-.total2 {
-    padding-left: 8em;
+
+.infos > div {
+padding: 0.3em;
 }
 
-.frete2 {
-    padding-left: 11.5em;
-}
-
-.box-container {
-    display: flex;
-    flex-direction: row;
+.opcao {
+    margin-top: 0.5em;
+    align-items: center;
     align-content: center;
-    justify-content: center;
-    margin: 0.5em 2em;
-}
-
-.box-p-b {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
 }
 
 .a {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   
-    width: 42em;
+    width: 50em;
   
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-evenly;
   
     padding-top: 0.5em;
   }
 
-.box-p-b button {
-    padding: 1em;
-}
-
-.container-endereço {
+  .cidade, .destinatario {
+    font: 400 1em "Oswald";
+  }
+  .container-endereço {
     display: flex;
     flex-direction: column;
-    background-color: #f5f5f5;
 
-    padding: 2.5em 30em 2.5em 2em;
-    margin: 1.5em 1.5em 1.5em 3em;
-
-    border: 1px solid white;
     border-radius: 5px;
-    box-shadow: 0px 2px 3px 0px #888;;
 
-    justify-content: center;
     align-content: center;
-    align-items: center;
 }
 
-
-.endereço > div {
+.infos > div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-content: center;
 }
-
-input {
-    align-items: center;
-}
-
 
 .box-endereço {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #f5f5f5;
 
     justify-items: center;
+    align-items: center;
+    align-content: center;
 
-    padding: 2em;
-    margin: 2em;
+    padding: 1em 1.25em;
+    margin: 1em;
 
     border: 1px solid white;
     border-radius: 5px;
     box-shadow: 0px 2px 3px 0px #888;;
 }
 
-.endereço-desc, .desc, .c-t {
-    display: flex;
+.endereço {
     flex-direction: column;
-
-    align-items: center;
+    margin: 0.5em;
+    padding: 0em 1em;
 }
 
-.info h1 {
-    text-align: center;
-    font-size: 1em;
+.add {
+    flex-direction: row;
+    padding: 0.5em 2em;
 }
 
-.f-p, .total {
-    padding: 1em 0em;
-    font: 1.2em "Oswald";
-}
-
-.f-p span, .total span {
-    font: 1.2em "Bebas Neue";
-}
-
-.titulo-produto {
-    font: 1.2em "Bebas Neue";
-}
-
-.cor, .tamanho {
-    font: 1em "Oswald";
-    font-weight: 400;
-}
-
-.cor span, .tamanho span {
-    font: 1em "Oswald";
-    font-weight: 200;
-}
-
-.botao {
-    display: flex;
-    flex-direction: column;
-}
-
-.botao button {
-    display: flex;
-    flex-direction: column;
-    
-    background-color: #5EC5FF;
-    font: 1.2em "Bebas Neue";
-
-    text-align: center;
-    padding: 0em 4em;
-    
-    border-radius: 5px;
-    border: none;
-
-    cursor: pointer;
-    transition-duration: 0.5s;
-    text-decoration: none;
-
-    align-content: flex-end;
-}
-
-.botao button {
+button {
     background-color: #5EC5FF;
     font: 1.2em "Bebas Neue";
 
@@ -199,18 +109,101 @@ input {
     align-content: flex-end;
 }
 
-.botao button:hover {
+button:hover {
     background-color: #5EC5FF;
     opacity: 0.6;
     color: black;
+    text-decoration: none;
 }
 
-.box-endereço {
-    font: 1.5em "Bebas Neue";
+.box-pedido {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+
+  justify-items: center;
+
+  padding: 2.5em;
+
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0px 2px 3px 0px #888;;
 }
 
-.box-endereço {
-    font: 1.5em "Bebas Neue";
+.pedido-desc, .desc, .c-t {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.info h1 {
+  text-align: center;
+  font-size: 1em;
+}
+
+.f-p, .total {
+  padding: 1em 0em;
+  font: 1.2em "Oswald";
+}
+
+.f-p span {
+  font: 1.2em "Bebas Neue";
+  padding-left: 3em;
+}
+
+.frete span {
+  padding-left: 8.5em;
+}
+
+.total span {
+  padding-left: 5em;
+  font: 1.2em "Bebas Neue";
+}
+
+.titulo-produto {
+  font: 1.2em "Bebas Neue";
+}
+
+.cor, .tamanho {
+  font: 1em "Oswald";
+  font-weight: 400;
+}
+
+.cor span, .tamanho span {
+  font: 1em "Oswald";
+  font-weight: 200;
+}
+
+.botao {
+  display: flex;
+  flex-direction: column;
+}
+
+.botao button {
+  display: flex;
+  flex-direction: column;
+}
+
+.botao button {
+  background-color: #5EC5FF;
+  font: 1.2em "Bebas Neue";
+
+  text-align: center;
+  padding: .3em 3em;
+  
+  border-radius: 5px;
+  border: none;
+
+  cursor: pointer;
+  transition-duration: 0.5s;
+  text-decoration: none;
+}
+
+.botao button:hover {
+  background-color: #5EC5FF;
+  opacity: 0.6;
+  color: black;
 }
 `
 
