@@ -4,6 +4,7 @@ import {Container} from './styled';
 export default function ClientesAdmin () {
     return (
         <Container>
+            <table>
         <thead>
             <th>ID CLIENTE</th>
             <th>NOME DO CLIENTE</th>
@@ -111,7 +112,7 @@ export default function ClientesAdmin () {
             <td>EXEMPLO1@GMAIL.COM</td>
             <td>  </td>
         </tr>
-
+</table>
 
         </Container>
     )
