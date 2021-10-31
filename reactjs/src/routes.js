@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom'
 import Home from './pages/home/index'
 import Login from './pages/userAcess/login'
 import SobreNos from './pages/home/sobre nos'
-import AddEndereco from './pages/endereço/adicionar-endereco';
+import AddEndereco from './pages/purchaseData/endereço/adicionar-endereco';
 import Parcelamento from './pages/purchaseData/parcelamento';
 import Pagamento from './pages/purchaseData/pagamentos';
 import Desc from './pages/productDetails/descricao-produto';
@@ -17,9 +17,9 @@ import Pedidos from './pages/purchaseData/pedidos';
 import registrarUser from './pages/userAcess/registrar-user';
 import PedidosAdmin from './pages/admin/pedidos-adm';
 import CadastrarProduto from './pages/admin/produtos/cadastrar-produto';
-import Carrinho from './pages/carrinho';
+import Carrinho from './pages/purchaseData/carrinho';
 import ClientesAdm from './pages/admin/clientes';
-import Enderecos from './pages/endereço/meus-endereços';
+import Enderecos from './pages/purchaseData/endereço/meus-endereços';
 
 export default function Final() {
     return (

@@ -1,7 +1,7 @@
 import { Container } from "./styled";
-import Cabecalho from "../../components/cabecalho";
-import { Titulo } from "../../components/titulo/styled";
-import Contador from "../../components/contador/index"
+import Cabecalho from "../../../components/cabecalho";
+import { Titulo } from "../../../components/titulo/styled";
+import Contador from "../../../components/contador/index"
 import AproveiteTambém from "./enjoy";
 
 export default function Carrinho () {

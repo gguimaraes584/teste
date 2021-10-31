@@ -1,6 +1,6 @@
 import { Container } from "./styled";
 import { useState, useEffect } from "react";
-import Api from "../../../service/api";
+import Api from "../../../../service/api";
 
 const api = new Api();
 
