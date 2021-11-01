@@ -3,13 +3,16 @@
     margin-left: 4%;
 }
 
+.container-principal {
+    display: flex;
+    flex-direction: row;
+}
+
 .container-images {
-    margin-left: 2%;
     font: 1.2em "Oswald";
     border: solid black 1px;
     border-radius: 18px;
-    padding: 1em 2em;
-    width: 15%;   
+    padding: 1em 2em; 
 }
 
 .container-images button{
@@ -18,13 +21,11 @@
     border: solid black 1px;
     background-color: white;
     border-radius: 18px;
-    padding: 1em 2em;
-    margin-top: 0 15px;
 }
 
 .container-secundario {
     display: flex;
-    margin-left: 57%;
+    flex-direction: column;
 }
 
 .resumo {
