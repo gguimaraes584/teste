@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { Container } from './styled'
 
 export default function Home () {
-    
     return (
     <Container>
         <Cabecalho/>
@@ -18,7 +17,7 @@ export default function Home () {
                 <div class="masculino">Masculino</div>
                 <div class="img-masculino">
                     <div class="img-fut">
-                        <Link to="/produtos-masculinos">
+                        <Link to="/produtos/masculinos">
                             <img src="./assets/images/nike-airmax.jfif" alt="" />
                         </Link>
                     </div>
@@ -38,7 +37,7 @@ export default function Home () {
                 <div class="feminino">Feminino</div>
                 <div class="img-feminino">
                     <div class="img-fut">
-                        <Link to='produtos-femininos'>
+                        <Link to='produtos/femininos'>
                             <img src="./assets/images/woman.png" alt="" />
                         </Link>
                     </div>
@@ -54,7 +53,7 @@ export default function Home () {
             <div class="geral-fut">
             <div class="fut">Todos os Produtos</div>
             <div class="img-fut">
-                <Link to='/produtos-todos'>
+                <Link to='/produtos/todos'>
                     <img src="./assets/images/barca.svg" alt="" />
                 </Link>
                 </div>

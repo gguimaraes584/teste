@@ -1,16 +1,43 @@
 import db from './db.js'
 import express from 'express'
 import cors from 'cors'
+import { Sequelize } from 'sequelize';
+
+const { op, col, fn } = Sequelize;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 
-app.get('/produto/:categoria', async (req, resp) => {
+app.get('/produto', async (req, resp) => {
     try {
-        let a = await db.infoa_dtn_tb_produto.findAll ({order: [['id_produto', 'desc']]});
-        resp.send(a);
+
+        let page = req.query.page || 0;
+        if (page <= 0) page = 1;
+
+        const itemsPerPage = 15;
+        const skipItems = (page-1) * itemsPerPage;
+
+        const a = await db.infoa_dtn_tb_produto.findAll ({
+            limit: itemsPerPage,
+            offset: skipItems,
+            order: [[ 'nm_produto', 'asc' ]],
+        });
+       
+        const total = await db.infoa_dtn_tb_produto.findOne({
+            raw: true,
+            attributes: [
+            [fn('count', 1 ), 'qtd']
+            ]
+        });
+        resp.send({
+            items: a,
+            total: total.qtd,
+            totalPaginas: Math.ceil(total.qtd/15),
+            pagina: Number(page)
+        });
+
     } catch (e) {
         resp.send({erro: e.toString()});
     }

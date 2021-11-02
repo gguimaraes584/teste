@@ -1,6 +1,8 @@
 import styled from "styled-components"; 
 const {Container} = styled.div`
-.titulo-pagina {
+
+
+  .titulo-pagina {
     text-align: center;
     font: 2em "Bebas Neue"
   }
@@ -20,13 +22,12 @@ const {Container} = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 6em 0em;
+    padding: 3em 0em 2em 0em;
   }
   
   .prod:hover{
     opacity:0.5;
     cursor: pointer;
-  
   }
   
   .box img {
@@ -84,6 +85,11 @@ const {Container} = styled.div`
   
   .parcelamento {
    font: 1em "Oswald";
+  }
+
+  .paginacao {
+    display: flex;
+    justify-content: center;
   }
 `
 export {Container}

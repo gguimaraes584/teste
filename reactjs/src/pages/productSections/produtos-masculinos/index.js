@@ -3,7 +3,7 @@ import Cabecalho from "../../../components/cabecalho";
 import { useState, useEffect } from "react";
 
 import Api from "../../../service/api";
-
+import Paginas from "../paginacao/index";
 
 const api = new Api();
 
@@ -12,17 +12,23 @@ const api = new Api();
 export default function Masculinos() {
 
   const [produto, setProduto] = useState([]);
+  const [pagina, setPagina] = useState(1);
+  const [totalPaginas, setTotalPaginas] = useState(0);
 
   const listar = async() => {
-    const produtosr = await api.listar();
-    setProduto(produtosr);
-    console.log(setProduto)
+    const produtosr = await api.listar(pagina);
+    setProduto(produtosr.items);
+    setTotalPaginas(produtosr.totalPaginas);
+  }
+
+  function irPara(pagina) {
+    setPagina(pagina);
   }
 
   useEffect(() => { 
     listar();
   },
-  [])
+  [pagina])
 
   return (
     <Container>
@@ -36,16 +42,6 @@ export default function Masculinos() {
             <option value="class1">Mais relevantes</option>
             <option value="class2">Menor preço</option>
             <option value="class3">Maior preço</option>
-          </select>
-        </div>
-
-        <div class="classificar2">
-          <select id="classificar">
-            <option value="class1">Gênero</option>
-            <option value="class1">Feminino</option>
-            <option value="class2">Masculino</option>
-            <option value="class3">Lançamento</option>
-            <option value="class4">Infantil</option>
           </select>
         </div>
       </div>
@@ -64,6 +60,13 @@ export default function Masculinos() {
             </div>
           </div>
         )}
+      </div>
+      <div class="paginacao">
+          <Paginas 
+            totalPaginas={totalPaginas} 
+            pagina={pagina}
+            onPageChange={irPara}
+          />
       </div>
     </Container>
   );
