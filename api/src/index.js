@@ -10,6 +10,52 @@ app.use(cors());
 app.use(express.json());
 
 
+
+app.post('/login', async(req, resp) => {
+    let login = req.body;
+
+    let r = await db.infoa_dtn_tb_cliente.findOne(
+        {
+            where: {
+                ds_email: login.usuario,
+                ds_senha: login.senha
+
+            }
+        })
+        if(r == null)
+        return resp.send({ erro: 'Credenciais Inválidas'});
+
+        resp.sendStatus(200);
+});
+
+app.get('/login', async(req, resp) => {
+    let login = req.body;
+
+    let r = await db.infoa_dtn_tb_cliente.findOne(
+        {
+            where: {
+                ds_email: login.usuario,
+                ds_senha: login.senha
+
+            }
+            
+
+        })
+        if(r == null)
+        return resp.send({ erro: 'Credenciais Inválidas'});
+
+        resp.sendStatus(200);
+});
+
+
+
+
+
+
+
+
+
+
 app.get('/produto', async (req, resp) => {
     try {
 
