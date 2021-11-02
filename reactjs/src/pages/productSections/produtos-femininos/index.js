@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 import Api from "../../../service/api";
 import Paginas from "../paginacao/index";
+import { Link } from "react-router-dom";
 
 const api = new Api();
 
@@ -66,7 +67,7 @@ export default function Feminino(){
               <div class="valor">{item.vl_preco}</div>
               <div class="parcelamento">ou 7x de R$ 45,00</div>
               <div class="adc-carrinho">
-                <button> Adicionar ao carrinho </button>
+                <button> <Link to="/carrinho"/>  Adicionar ao carrinho </button>
               </div>
           </div>
         </div>

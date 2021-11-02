@@ -25,6 +25,7 @@ export default function Contador(){
   return (
        
         <ContadorDiv>
+          <ToastContainer/>
           
           <div className="menos" onClick={remover}>
             -
