@@ -8,6 +8,8 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
 
+    margin-top: 45px;
+
     height: 80vh;
     font: 1.2em "Bebas Neue";
   }

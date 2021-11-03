@@ -1,11 +1,12 @@
-import Cabecalho from "../../../components/cabecalho";
 import { Container } from "./styled";
 import { Button } from "../../../components/button/styled";
 import { Input } from "../../../components/input/styled";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoadingBar from 'react-top-loading-bar';
+
 
 import Api from '../../../service/api';
 const api = new Api(); 
@@ -16,23 +17,29 @@ export default function Login() {
     const [ usuario, setUsuario] = useState('');
     const [ senha, setSenha] = useState('');
 
+    const loading = useRef(null); 
     const navigation = useHistory();
 
     const logar = async () => {
+        loading.current.continuousStart();
+
         let r = await api.login(usuario, senha);
         if (r.erro) {
             toast.error(`${r.erro}`)
+            loading.current.staticStart();
         } else {
-            toast.error("Login realizado com sucesso")
-            navigation.push('/sobre-nos');
+            
+            navigation.push('/home');
+            
         }
 
     }
 
     return(
         <Container>
-            <Cabecalho/>
+            
             <ToastContainer/>
+            <LoadingBar color="red" ref={loading} />
 
             
             <div class="conteudo-reg">
