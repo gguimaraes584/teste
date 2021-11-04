@@ -10,6 +10,11 @@ export default class Api {
         return r.data;
     }
 
+    async listarTodos(pagina) {
+        let r = await api.get(`/produto-todos/?page=${pagina}`);
+        return r.data;
+    }
+
     async inserir( nome, descricao, categoria, preco, tamanho, img){
         let r = await api.post('/produto', { nome, descricao, categoria, preco, tamanho, img} );
         return r.data;

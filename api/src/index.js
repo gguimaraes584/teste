@@ -47,6 +47,38 @@ app.get('/login', async(req, resp) => {
         resp.sendStatus(200);
 });
 
+app.get('/produto-todos', async (req, resp) => {
+    try {
+
+        let page = req.query.page || 0;
+        if (page <= 0) page = 1;
+
+        const itemsPerPage = 15;
+        const skipItems = (page-1) * itemsPerPage;
+
+        const a = await db.infoa_dtn_tb_produto.findAll ({
+            limit: itemsPerPage,
+            offset: skipItems,
+            order: [[ 'nm_produto', 'asc' ]],
+        });
+       
+        const total = await db.infoa_dtn_tb_produto.findOne({
+            raw: true,
+            attributes: [
+            [fn('count', 1 ), 'qtd']
+            ]
+        });
+        resp.send({
+            items: a,
+            total: total.qtd,
+            totalPaginas: Math.ceil(total.qtd/15),
+            pagina: Number(page)
+        });
+
+    } catch (e) {
+        resp.send({erro: e.toString()});
+    }
+})
 
 app.get('/produto/:genero', async (req, resp) => {
     try {
@@ -66,6 +98,7 @@ app.get('/produto/:genero', async (req, resp) => {
        
         const total = await db.infoa_dtn_tb_produto.findOne({
             raw: true,
+            where: { 'ds_genero': req.params.genero },
             attributes: [
             [fn('count', 1 ), 'qtd']
             ]
