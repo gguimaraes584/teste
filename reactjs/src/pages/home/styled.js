@@ -151,7 +151,7 @@ const Container = styled.div `
     }
 
     .img-categ img {
-        width: 13em;
+        width: 12.5em;
         height: 10em;
     }
 
