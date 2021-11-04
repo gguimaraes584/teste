@@ -15,8 +15,8 @@ export default class Api {
         return r.data;
     }
 
-    async inserir( nome, descricao, categoria, preco, tamanho, img){
-        let r = await api.post('/produto', { nome, descricao, categoria, preco, tamanho, img} );
+    async inserir( nome, genero, descricao, categoria, preco, tamanho, img){
+        let r = await api.post('/produto', { nome, genero, descricao, categoria, preco, tamanho, img} );
         return r.data;
     }
 

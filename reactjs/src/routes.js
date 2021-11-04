@@ -10,7 +10,6 @@ import Desc from './pages/productDetails/descricao-produto';
 import Feminino from './pages/productSections/produtos-femininos';
 import Infantil from './pages/productSections/produtos-infantis';
 import Masculinos from './pages/productSections/produtos-masculinos';
-import Lancamentos from './pages/productSections/lancamentos';
 import ProdutosTodos from './pages/productSections/todos-produtos';
 import LoginAdmin from './pages/admin/login-adm/index';
 import Pedidos from './pages/purchaseData/pedidos';
@@ -38,7 +37,6 @@ export default function Final() {
             <Route path='/produtos/femininos' component={Feminino}/>
             <Route path='/produtos/infantis' component={Infantil}/>
             <Route path='/produtos/masculinos' component={Masculinos}/>
-            <Route path='/lancamentos' component={Lancamentos}/>
             <Route path='/produtos' component={ProdutosTodos}/>
             <Route path='/pedidos' component={Pedidos}/>
             <Route path='/registrar' component={registrarUser}/>

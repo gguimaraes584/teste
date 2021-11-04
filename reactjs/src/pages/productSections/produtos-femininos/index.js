@@ -17,18 +17,17 @@ export default function Feminino(){
   const [totalPaginas, setTotalPaginas] = useState(0);
   const loading = useRef(null); 
 
-  const listar = async() => {
-    const produtosr = await api.listar(pagina, 'Feminina');
-    loading.current.complete();
-    setProduto(produtosr.items);
-    setTotalPaginas(produtosr.totalPaginas);
-  }
-
   function irPara(pagina) {
     setPagina(pagina);
   }
 
   useEffect(() => { 
+    const listar = async() => {
+      const produtosr = await api.listar(pagina, 'Feminina');
+      loading.current.complete();
+      setProduto(produtosr.items);
+      setTotalPaginas(produtosr.totalPaginas);
+    }
     listar();
   },
   [pagina])

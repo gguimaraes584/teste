@@ -15,18 +15,18 @@ export default function Infantil() {
   const [totalPaginas, setTotalPaginas] = useState(0);
   const loading = useRef(null); 
 
-  const listar = async() => {
-    loading.current.complete();
-    const produtosr = await api.listar(pagina, 'Infantil');
-    setProduto(produtosr.items);
-    setTotalPaginas(produtosr.totalPaginas);
-  }
-
+  
   function irPara(pagina) {
     setPagina(pagina);
   }
 
   useEffect(() => { 
+    const listar = async() => {
+      loading.current.complete();
+      const produtosr = await api.listar(pagina, 'Infantil');
+      setProduto(produtosr.items);
+      setTotalPaginas(produtosr.totalPaginas);
+    }  
     listar();
   },
   [pagina])

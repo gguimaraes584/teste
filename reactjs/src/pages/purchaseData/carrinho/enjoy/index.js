@@ -1,8 +1,4 @@
 import { Container } from "./styled";
-import { useState, useEffect } from "react";
-import Api from "../../../../service/api";
-
-const api = new Api();
 
 export default function AproveiteTambém () {
     return (
