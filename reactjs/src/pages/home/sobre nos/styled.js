@@ -21,6 +21,7 @@ const Container = styled.div`
 
   .faixa-1 {
     padding: 2em 5em;
+    
   }
 
   .titulos {
@@ -29,24 +30,31 @@ const Container = styled.div`
     padding: 1em;
   }
 
-  .f1-img {
+  .f1-img img {
     height: 100%;
+   
   }
   
   .f1-img img{
     width: 90%;
+    border-radius: 5%;
   }
 
   .f2-img img{
-    width: 90%;
+    width: 80%;
+    border-radius: 5%;
+    margin-left: 75px;
   }
 
-  .f3-img img{
-    width: 90%;
+  .f3img img{
+    width: 70%;
+    border-radius: 5%;
   }
 
-  .f4-img img{
-    width: 90%;
+  .f4img img{
+    width: 50%;
+    border-radius: 5%;
+    margin-left: 350px;
   }
 
   .f1-conteudo {
@@ -132,9 +140,9 @@ const Container = styled.div`
   }
 
   .f4text {
-    text-align: center;
+    text-align: right;
     font: 1.8em "Oswald";
-    width: 40%;
+    width: 60%;
   }
 `
 
