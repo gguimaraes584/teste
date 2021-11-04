@@ -73,11 +73,11 @@ export default function Home () {
                 <div class="descricao">Roupas</div>
             </div>
             <div class="img-categ">
-                <img src="./assets/images/calcado.svg" alt="" />
+                <img src="./assets/images/mizuno.jpg" alt="" />
                 <div class="descricao">Calçados</div>
             </div>
             <div class="img-categ">
-                <img src="./assets/images/calcado.svg" alt="" />
+                <img src="./assets/images/lucas.jpg" alt="" />
                 <div class="descricao">Acessórios</div>
             </div>
             </div>

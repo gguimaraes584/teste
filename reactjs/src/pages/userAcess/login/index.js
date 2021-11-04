@@ -72,7 +72,7 @@ export default function Login() {
 
                     <div class="reg-conta">
                         <div class="a">
-                            <a href="">Não Possuo Conta</a>
+                            <button>Não Possuo Conta</button>
                         </div>
                     </div>
                 </div>

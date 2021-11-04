@@ -13,16 +13,16 @@ export default function CadastrarProduto () {
     
     const [ nome, setNome ] = useState ('');
     const [ preco, setPreco ] = useState (0);
-    const [ sexo, setSexo ] = useState ('');
+    const [ genero, setGenero ] = useState ('');
     const [ categoria, setCategoria ] = useState ('');
     const [ tamanho, setTamanho ] = useState (0);
     const [ img, setImg] = useState ('');
     const [ desc, setDesc ] = useState ('')
 
     async function inserir() {
-        if (nome !=='' && preco > 0 && categoria !=='' && img !=='' && desc !=='' && tamanho > 0 && tamanho < 26 || tamanho > 25 && tamanho < 34 )
+        if (nome !=='' && preco > 0 && categoria !=='' && genero !== '' && img !=='' && desc !=='' && tamanho > 0 && tamanho < 34 )
             {
-                let r = await api.inserir(nome, desc, categoria, preco, tamanho, img);
+                let r = await api.inserir(nome, genero, desc, categoria, preco, tamanho, img);
                 if (r.erro)
                     toast.dark('Erro')
                 else
@@ -37,6 +37,7 @@ export default function CadastrarProduto () {
         setNome('')
         setPreco('')
         setCategoria('')
+        setGenero('')
         setTamanho(0)
         setImg('');
         setDesc('');
@@ -66,12 +67,8 @@ export default function CadastrarProduto () {
                                     <div className="opcoes">
 
                                         <div className="sexo">
-                                            SEXO:
-                                            <select name="sexo" placeholder="SELECIONE">
-                                                <option selected>SELECIONE</option>
-                                                <option>FEMININO</option>
-                                                <option>MASCULINO</option>
-                                            </select>
+                                            Genero:
+                                            <input type="text" value={genero} onChange={e => setGenero(e.target.value)} />
                                         </div>
                                         <div className="cores">
                                             CORES:

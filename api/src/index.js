@@ -1,7 +1,7 @@
 import db from './db.js'
 import express from 'express'
 import cors from 'cors'
-import { Sequelize } from 'sequelize';
+import Sequelize from 'sequelize';
 
 const { op, col, fn } = Sequelize;
 
@@ -36,7 +36,6 @@ app.get('/login', async(req, resp) => {
             where: {
                 ds_email: login.usuario,
                 ds_senha: login.senha
-
             }
             
 
@@ -117,11 +116,12 @@ app.get('/produto/:genero', async (req, resp) => {
 
 app.post('/produto', async (req, resp) => {
     try {
-        let {nome, descricao, categoria, preco, tamanho, img} = req.body;
+        let {nome, genero, descricao, categoria, preco, tamanho, img} = req.body;
 
         let r = await db.infoa_dtn_tb_produto.create({
             nm_produto: nome,
             ds_titulo: nome,
+            ds_genero: genero,
             ds_descricao: descricao,
             ds_categoria: categoria,
             vl_preco: preco,

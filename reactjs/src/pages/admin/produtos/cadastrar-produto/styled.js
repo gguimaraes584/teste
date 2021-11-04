@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 
+padding: 2em 6em;
+
 h1 {
     font: 2.5em "Bebas Neue";
     padding: 0em 0.5em;
@@ -13,6 +15,7 @@ h1 {
     align-items: center;
     margin: 1em 0.5em;
 }
+
 
 .box-cadastro {
 display: flex;

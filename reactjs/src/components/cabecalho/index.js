@@ -5,12 +5,12 @@ export default function Cabecalho() {
     return (
         <CabecalhoDiv>
             <div class="logo">
-                <Link to='./'>
+                <Link to='/home'>
                 <img src="../../assets/images/logo.svg" alt=""/>
                 </Link>
             </div>
             <div class="menu">
-                <div class="menu-item"><Link to='/lancamentos'> Lançamento</Link></div>
+                <div class="menu-item"><Link to='/sobre-nos'> Sobre Nós</Link></div>
                 <div class="menu-item"><Link to='/produtos/femininos'> Feminino</Link></div>
                 <div class="menu-item"><Link to='/produtos/masculinos'> Masculino</Link></div>
                 <div class="menu-item"><Link to='/produtos/infantis'> Infantil</Link></div>
