@@ -3,6 +3,7 @@ import { Button } from "../../../components/button/styled";
 import { Input } from "../../../components/input/styled";
 import { useState, useRef } from "react";
 import { useHistory } from 'react-router-dom';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoadingBar from 'react-top-loading-bar';

@@ -16,7 +16,7 @@ export default function Feminino(){
   const [totalPaginas, setTotalPaginas] = useState(0);
 
   const listar = async() => {
-    const produtosr = await api.listar(pagina);
+    const produtosr = await api.listar(pagina, 'Feminino');
     setProduto(produtosr.items);
     setTotalPaginas(produtosr.totalPaginas);
   }

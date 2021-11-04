@@ -48,15 +48,7 @@ app.get('/login', async(req, resp) => {
 });
 
 
-
-
-
-
-
-
-
-
-app.get('/produto', async (req, resp) => {
+app.get('/produto/:genero', async (req, resp) => {
     try {
 
         let page = req.query.page || 0;
@@ -68,6 +60,7 @@ app.get('/produto', async (req, resp) => {
         const a = await db.infoa_dtn_tb_produto.findAll ({
             limit: itemsPerPage,
             offset: skipItems,
+            where: { 'ds_genero': req.params.genero },
             order: [[ 'nm_produto', 'asc' ]],
         });
        

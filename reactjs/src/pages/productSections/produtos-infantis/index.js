@@ -14,7 +14,7 @@ export default function Infantil() {
   const [totalPaginas, setTotalPaginas] = useState(0);
 
   const listar = async() => {
-    const produtosr = await api.listar(pagina);
+    const produtosr = await api.listar(pagina, 'Infantil');
     setProduto(produtosr.items);
     setTotalPaginas(produtosr.totalPaginas);
   }
