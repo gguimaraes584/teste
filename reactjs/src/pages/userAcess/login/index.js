@@ -3,6 +3,7 @@ import { Button } from "../../../components/button/styled";
 import { Input } from "../../../components/input/styled";
 import { useState, useRef } from "react";
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -61,6 +62,7 @@ export default function Login() {
                             <Input value={senha}
                             onChange={e => setSenha(e.target.value)}
                              type="password"/>
+                        <div class="reg-camposenha">Esqueceu sua senha?</div>
                         </div>
                     </div>
 
@@ -71,8 +73,8 @@ export default function Login() {
                     </div>
 
                     <div class="reg-conta">
-                        <div class="a">
-                            <button>Não Possuo Conta</button>
+                        <div class="registrar"> 
+                        <Link to="/registrar">Rejistre-se</Link> 
                         </div>
                     </div>
                 </div>

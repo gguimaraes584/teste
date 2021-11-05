@@ -57,5 +57,34 @@ const Container = styled.div`
     
     padding: 1em;
   }
+
+.reg-camposenha {
+  margin-top: 4px;
+  font: italic;
+  font-size: 1em;
+  background-color: white;
+ 
+}
+
+.reg-camposenha:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.reg-conta:{
+  margin-top: 4px;
+  font: italic;
+  font-size: 1em;
+  background-color: white;
+}
+
+.reg-conta:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.registrar a{
+  color: black;
+}
 `
 export {Container}

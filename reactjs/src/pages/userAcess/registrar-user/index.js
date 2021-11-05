@@ -8,7 +8,7 @@ export default function registrarUser(){
         
         <div class="conteudo-reg">
             <div class="box-reg">
-                <div class="reg-titulo">Registrar</div>
+                <div class="reg-titulo">Rejistrar</div>
                 <div class="reg-campos">
                     <div class="reg-campotitulo">E-Mail:</div>
                     <div class="reg-campos-input">
@@ -35,12 +35,10 @@ export default function registrarUser(){
                         <input type="password">
                     </input>
                 </div>
-                <div class="reg-a">
-                    <a href="https://www.youtube.com/watch?v=Mj5udbZml_I">Registrar</a>
+                <div class="reg-a"> Rejistrar
                 </div>
                 <div class="reg-conta">
-                    <div class="a">
-                        <a href="https://www.youtube.com/watch?v=Mj5udbZml_I">Já Possuo Conta | Fazer Login</a>
+                    <div class="a"> Já Possuo Conta | Fazer Login
                     </div>
                 </div>
 
