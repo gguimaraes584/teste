@@ -23,7 +23,6 @@ export default function Home () {
                     </div>
                 </div>
                 <div class="desc-t">
-                    <div class="tenis">Nike Air Max 2021</div>
                     <div class="grandes-passos">
                     DÊ GRANDES PASSOS PARA O QUE DER E VIER COM A
                     </div>

@@ -11,7 +11,7 @@ export default function Cabecalho() {
                 </Link>
             </div>
             <div class="menu">
-                <div class="menu-item"><Link to='/sobre-nos'> Sobre Nós</Link></div>
+                <div class="menu-item"><Link to='/produtos'> Todos os produtos</Link></div>
                 <div class="menu-item"><Link to='/produtos/femininos'> Feminino</Link></div>
                 <div class="menu-item"><Link to='/produtos/masculinos'> Masculino</Link></div>
                 <div class="menu-item"><Link to='/produtos/infantis'> Infantil</Link></div>
