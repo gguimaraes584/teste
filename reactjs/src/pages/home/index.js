@@ -24,7 +24,6 @@ export default function Home () {
                     </div>
                 </div>
                 <div class="desc-t">
-                    <div class="tenis">Nike Air Max 2021</div>
                     <div class="grandes-passos">
                     DÊ GRANDES PASSOS PARA O QUE DER E VIER COM A
                     </div>
@@ -44,8 +43,8 @@ export default function Home () {
                     </div>
                 </div>
                 <div class="desc-tf">
-                    <div class="preo">NÃO SE PREOCUPE COM O SUOR, NÓS TE DAMOS</div>
-                    <div class="sup">SUPORTE COM ELE</div>
+                    <div class="preo">NÃO SE PREOCUPE COM O CANSAÇO, NÓS TE DAMOS</div>
+                    <div class="sup">O MÁXIMO APOIO COM ISSO</div>
                 </div>
             </div>
         </div>
@@ -60,7 +59,7 @@ export default function Home () {
                 </div>
             <div class="desc-fut">
                 <div class="vis">
-                VISTA-SE PARA ANDAR COM O MAIOR ESTILO NO MUNDO
+                VISTA-SE PARA ANDAR COM O MAIOR ESTILO NAS RUAS DE TODO MUNDO
                 </div>
             </div>
             </div>

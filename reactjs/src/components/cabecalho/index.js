@@ -11,15 +11,17 @@ export default function Cabecalho() {
                 </Link>
             </div>
             <div class="menu">
-                <div class="menu-item"><Link to='/sobre-nos'> Sobre Nós</Link></div>
+                <div class="menu-item"><Link to='/produtos'> Todos os produtos</Link></div>
                 <div class="menu-item"><Link to='/produtos/femininos'> Feminino</Link></div>
                 <div class="menu-item"><Link to='/produtos/masculinos'> Masculino</Link></div>
                 <div class="menu-item"><Link to='/produtos/infantis'> Infantil</Link></div>
             </div>
             <div class="menu-botao">
                 <Link to='/carrinho'><button><img src="/assets/images/carrinhoo.svg" alt="" width='20px' /></button></Link>
+                <div  className="botao-login">
+                    <Link to='/login'>Login</Link>
+                </div>
             </div>
-            
         </CabecalhoDiv>
     )
 }

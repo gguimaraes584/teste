@@ -71,6 +71,11 @@ input {
     padding: 1em;
   }
 
+  .reg-a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
   .reg-a a {
       text-align: center;
       align-items: center;
@@ -97,7 +102,8 @@ input {
     padding: 1em;
   }
 
-  .reg-conta a:hover {
+  .reg-conta:hover {
+    cursor: pointer;
     text-decoration: underline;
   }
 

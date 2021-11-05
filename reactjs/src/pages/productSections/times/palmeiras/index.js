@@ -25,7 +25,7 @@ export default function Palmeiras() {
   useEffect(() => { 
     const listar = async() => {
       loading.current.complete();
-      const produtosr = await api.listar(pagina, 'F');
+      const produtosr = await api.listarTime(pagina, 'Palmeiras');
       setProduto(produtosr.items);
       setTotalPaginas(produtosr.totalPaginas);
     }
