@@ -28,6 +28,11 @@ const CabecalhoDiv = styled.div`
     cursor: pointer;
   }
 
+  .botao-login{
+    font: 16px "Bebas Neue"
+    margin-right: 2em;
+  }
+
   a,
   a:link,
   a:visited {
@@ -48,6 +53,12 @@ const CabecalhoDiv = styled.div`
 
     transition: 0.4s;
     cursor: pointer;
+  }
+
+  .menu-botao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .menu-botao button:hover {

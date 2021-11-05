@@ -32,8 +32,8 @@ export default function Final() {
     <BrowserRouter>
         <Switch>
             {/*USUÁRIO*/}
-            <Route path='/home' exact={true} component={Home} />
-            <Route path='/' exact={true} component={Login} />
+            <Route path='/' exact={true} component={Home} />
+            <Route path='/login' component={Login} />
             <Route path='/sobre-nos' component={SobreNos} />
             <Route path='/endereço/add' component={AddEndereco} />
             <Route path='/parcelamento' component={Parcelamento} />
