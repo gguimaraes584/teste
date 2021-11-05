@@ -15,6 +15,13 @@ export default class Api {
         return r.data;
     }
 
+    async listarTime(pagina, time){
+
+        let r = await api.get(`/produto-time/${time}?page=${pagina}`);
+        console.log(r)
+        return r.data;
+    }
+
     async inserir( nome, genero, descricao, categoria, preco, tamanho, img){
         let r = await api.post('/produto', { nome, genero, descricao, categoria, preco, tamanho, img} );
         return r.data;
