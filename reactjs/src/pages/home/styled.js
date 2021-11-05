@@ -155,8 +155,8 @@ const Container = styled.div `
     }
 
     .img-categ img {
-        width: 4.5em;
-        height: 4em;
+        width: 3em;
+        height: 3em;
     }
 
     .img-categ {
@@ -220,6 +220,8 @@ const Container = styled.div `
     .redes {
     cursor: pointer;
     }
+
+    
 
 `
 

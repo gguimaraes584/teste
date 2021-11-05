@@ -34,7 +34,7 @@ export default function Infantil() {
   return (
     <Container>
       <Cabecalho />
-      <LoadingBar color="blue" ref={loading} />
+      <LoadingBar color="#fffb2a" ref={loading} />
       <div class="titulo-pagina">PRODUTOS INFANTIS</div>
 
       <div class="classificar-container">
