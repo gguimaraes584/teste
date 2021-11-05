@@ -1,6 +1,7 @@
 import Cabecalho from '../../components/cabecalho/index.js'
 import { Link } from 'react-router-dom'
 import { Container } from './styled'
+import Rodapé from './footer/'
 
 export default function Home () {
     return (
@@ -102,28 +103,7 @@ export default function Home () {
 
         </div>
 
-        <div class="faixa-6">
-            <div class="rodape">
-            <div class="box-cartao">
-                <div class="opcoes"><img src="../../public/images/boleto.svg" alt="" /></div>
-                <div class="opcoes"><img src="../../public/images/pix.svg" alt="" /></div>
-                <div class="opcoes"><img src="../../public/images/elo.svg" alt="" /></div>
-                <div class="opcoes"><img src="../../public/images/hiper.svg" alt="" /></div>
-                <div class="opcoes"><img src="../../public/images/master.svg" alt="" /></div>
-                <div class="opcoes"><img src="../../public/images/visa.svg" alt="" /></div>
-            </div>
-
-            <div class="contato">
-                <div class="fale"><b>Fale Conosco: </b></div>
-                <div class="email">contato@destiny.com</div>
-                <div class="email">0800-773-3475</div>
-                <div class="redes">
-                <div class="face"><img src="/assets/images/face.svg" alt="" /></div>
-                <div class="face"><img src="/assets/images/insta.svg" alt="" /></div>
-                </div>
-            </div>
-            </div>
-        </div>
+        <Rodapé/>
     </Container>
     )
 }
