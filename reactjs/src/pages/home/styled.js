@@ -150,9 +150,13 @@ const Container = styled.div `
     padding: 5em;
     }
 
+    .box-img{
+
+    }
+
     .img-categ img {
-        width: 12.5em;
-        height: 10em;
+        width: 3em;
+        height: 3em;
     }
 
     .img-categ {
@@ -216,6 +220,8 @@ const Container = styled.div `
     .redes {
     cursor: pointer;
     }
+
+    
 
 `
 

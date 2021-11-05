@@ -35,7 +35,7 @@ export default function Feminino(){
   return(
     <Container>
         <Cabecalho/>
-        <LoadingBar color="blue" ref={loading} />
+        <LoadingBar color="#ff2ded" ref={loading} />
         <div class="titulo-pagina">PRODUTOS FEMININOS</div>
 
       <div class="classificar-container">

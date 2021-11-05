@@ -66,21 +66,40 @@ export default function Home () {
             
         </div>
         <div class="faixa-5">
-            <div class="categorias">Explore</div>
-            <div class="box-img">
-            <div class="img-categ">
-                <img src="./assets/images/camisabr.svg" alt="" />
-                <div class="descricao">Roupas</div>
+            <div class="categorias">Escolha seu time</div>
+                <div class="box-img">
+                    <div class="img-categ">
+                        <Link to='/saopaulo'>
+                            <img src="./assets/images/sp.png" alt=""/>
+                        </Link>
+
+
+                    </div>
+                <div class="img-categ">
+                        <Link to='/palmeiras'>
+                            <img src="./assets/images/pal.png" alt="" />
+                        </Link>
+                </div>
+
+                <div class="img-categ">
+                        <Link to='/corinthians'>
+                            <img src="./assets/images/sccp.png" alt="" />
+                        </Link>
+                </div>
+
+                <div class="img-categ">
+                        <Link to='/santos'>
+                            <img src="./assets/images/sfc.png" alt="" />
+                        </Link>
+                </div>
+
+                <div class="img-categ">
+                        <Link to='/flamengo'>
+                            <img src="./assets/images/fla.png" alt="" />
+                        </Link>
+                </div>
             </div>
-            <div class="img-categ">
-                <img src="./assets/images/mizuno.jpg" alt="" />
-                <div class="descricao">Calçados</div>
-            </div>
-            <div class="img-categ">
-                <img src="./assets/images/lucas.jpg" alt="" />
-                <div class="descricao">Acessórios</div>
-            </div>
-            </div>
+
         </div>
 
         <div class="faixa-6">

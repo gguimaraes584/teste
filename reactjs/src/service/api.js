@@ -1,6 +1,6 @@
 import axios from 'axios'
 const api = axios.create({
-    baseURL: 'http://localhost:3030'
+    baseURL: 'https://destinyfrei.herokuapp.com'
 })
 
 export default class Api {
@@ -12,6 +12,13 @@ export default class Api {
 
     async listarTodos(pagina) {
         let r = await api.get(`/produto-todos/?page=${pagina}`);
+        return r.data;
+    }
+
+    async listarTime(pagina, time){
+
+        let r = await api.get(`/produto-time/${time}?page=${pagina}`);
+        console.log(r)
         return r.data;
     }
 

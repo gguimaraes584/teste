@@ -89,6 +89,9 @@ const Container = styled.div`
    font: 1em "Oswald";
   }
 
+  
+} 
+
 
 `
 export {Container}

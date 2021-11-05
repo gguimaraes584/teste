@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Cabecalho() {
     return (
         <CabecalhoDiv>
+          
             <div class="logo">
                 <Link to='/home'>
                 <img src="../../assets/images/logo.svg" alt=""/>
@@ -18,6 +19,7 @@ export default function Cabecalho() {
             <div class="menu-botao">
                 <Link to='/carrinho'><button><img src="/assets/images/carrinhoo.svg" alt="" width='20px' /></button></Link>
             </div>
+            
         </CabecalhoDiv>
     )
 }

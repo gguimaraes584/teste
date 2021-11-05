@@ -19,6 +19,11 @@ import CadastrarProduto from './pages/admin/produtos/cadastrar-produto';
 import Carrinho from './pages/purchaseData/carrinho';
 import ClientesAdm from './pages/admin/clientes';
 import Enderecos from './pages/purchaseData/endereço/meus-endereços';
+import Flamengo from './pages/productSections/times/flamengo';
+import SaoPaulo from './pages/productSections/times/saoPaulo';
+import Palmeiras from './pages/productSections/times/palmeiras';
+import Santos from './pages/productSections/times/santos';
+import Corinthians from './pages/productSections/times/corinthians';
 
 import Produtos from  './pages/admin/produtos/products/index'
 
@@ -42,6 +47,11 @@ export default function Final() {
             <Route path='/registrar' component={registrarUser}/>
             <Route path='/carrinho' component={Carrinho}/>
             <Route path='/endereço'component={Enderecos}/>
+            <Route path='/flamengo' component={Flamengo}/>
+            <Route path='/saopaulo' component={SaoPaulo}/>
+            <Route path='/palmeiras' component={Palmeiras}/>
+            <Route path='/santos' component={Santos}/>
+            <Route path='/corinthians' component={Corinthians}/>
             
             {/*PARTE ADMINISTRATIVA*/}
             <Route path='/admin/login' component={LoginAdmin}/>
