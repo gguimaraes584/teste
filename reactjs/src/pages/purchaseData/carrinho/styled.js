@@ -1,10 +1,25 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+height: 100vh;
 
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
 
 .resumo {
-    font: 200 1.2em "Bebas Neue";
+    font-family: "Bebas Neue";
+    font-size: .9em;
+}
+
+
+
+.tamanho {
+    font-family: "Bebas Neue";
 }
 
 .subtotal span {
@@ -47,18 +62,18 @@ export const Container = styled.div`
     padding: 1em;
 }
 
-.conteudo {
-    display: flex;
-    flex-direction: row;
-    margin: 0em 1em;
-    align-content: center;
-}
-
 .conteudo > div {
     padding: 0em 2em;
 }
 
-.titulo-produto, .subtotal, .desc, .total, .desconto {
+.titulo{
+    padding: 1em;
+    text-align: center;
+    font-family: "Bebas Neue";
+    font-size: 2em;
+}
+
+.subtotal, .desc, .total, .desconto {
     font: 400 1.25em "Bebas Neue";
 }
 

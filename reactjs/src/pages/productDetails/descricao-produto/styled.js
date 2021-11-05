@@ -3,6 +3,31 @@ import styled from "styled-components";
 
 const Container = styled.div `
 
+.descricao-produto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10em;
+}
+
+.img-desc{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Bebas Neue";
+  width: 50%;
+}
+
+.img-desc img{
+  width: 70%;
+}
+
+.desc {
+  font-family: "Oswald";
+  max-width: 20em;
+  font-size: 26px;
+}
+
 .geral-desc{
   display: flex;
   flex-direction: row;
@@ -12,7 +37,6 @@ const Container = styled.div `
 .img-produto img {
   height: 100vh;
 }
-
 
 .desc-text{
 margin-top: 80px;

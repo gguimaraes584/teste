@@ -1,59 +1,57 @@
 import { Container } from "./styled";
 import Cabecalho from "../../../components/cabecalho";
 import { Titulo } from "../../../components/titulo/styled";
-import Contador from "../../../components/contador/index"
+import CarrinhoItem from "./carrinho-item";
+import Cookie from "js-cookie";
 import AproveiteTambém from "./enjoy";
+import { useEffect, useState } from "react";
 
 export default function Carrinho () {
+    const [produtos, setProdutos] = useState([]);
+    useEffect(carregarCarrinho, []);
+
+    function carregarCarrinho() {
+        let carrinho = Cookie.get('carrinho');
+        carrinho = carrinho != null
+                            ? JSON.parse(carrinho)
+                            : [];
+        
+        setProdutos(carrinho);
+    }
+
+    function removerProduto(id) {
+        let carrinho = produtos.filter(item => item.id !== id);
+
+        Cookie.set('carrinho', JSON.stringify(carrinho));
+
+        setProdutos([...carrinho])
+    }
+
+    function alterarProduto(id, qtd) {
+
+        let produtoAlterado = produtos.filter(item => item.id === id)[0];
+        produtoAlterado.qtd = qtd;
+
+        Cookie.set('carrinho', JSON.stringify(produtos));
+    }
+
     return (
         <Container>
                 <Cabecalho/>
                 
-
+            <div className="titulo">
+                Meu Carrinho
+            </div>
             <div className="conteudo">
             
                 <div class="pedido-desc">
-                    <Titulo>MEU CARRINHO</Titulo>
-
-                    <div class="desc">
-                        <div class="pedido-imagem">
-                            <img src="/assets/images/camisa-sp.jpg" alt=""/>
-                        </div>
-
-                        <div class="info">
-                            <h1 class="titulo-produto"> Camisa São Paulo II 21/22 Rigoni Nº 77 </h1>
-                            <div class="cor">
-                                <span>
-                                COR:</span>
-                                Vermelho, Preto e Branco
-                            </div>
-                                                
-                            <div class="tamanho">
-                            <span>
-                                TAMANHO:</span> G
-                            </div>
-                            
-                            <div class="vl-preco">
-                                R$179,99
-                            </div>
-                            
-                            <div class="presente">
-                            <input type="checkbox"/> PARA PRESENTE?
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-                    <Contador/>
-
-                    <div className="frete">
-                        <h1>CALCULAR FRETE</h1>
-                        <input type="text"/>
-                        <button>CALCULAR</button>
-                    </div>
-
+                        {produtos.map((item) =>
+                            <CarrinhoItem key={item.id}
+                            info={item}
+                            onUpdate={alterarProduto}
+                            onRemove={removerProduto}
+                            />
+                        )}
                 </div>
 
                 <div className="resumo">
@@ -63,12 +61,6 @@ export default function Carrinho () {
                         <span>R$179,99</span>
                     </div>
 
-                    <hr/>
-
-                    <div className="desconto">
-                        DESCONTO
-                        <span>R$0,00</span>
-                    </div>
 
                     <hr/>
 

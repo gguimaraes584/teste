@@ -5,21 +5,22 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-export default function Contador(){
- const [contador, setContador] = useState(0);
+export default function Contador(props){
+ const [qtd, setQtd] = useState(props.value);
  
 
 
   function adicionar(){
-    if (contador >= 10)
-    return toast.warning("Número máximo de item atingido");
-    setContador(contador + 1);
+    if (qtd >= 10)
+      return toast.warning("Número máximo de item atingido");
+    setQtd(qtd + 1);
+    
   }
   
   function remover(){
-    if (contador === 0)
-    return;
-    setContador(contador - 1)
+    if (qtd === 0)
+      return toast.warning("Número mínimo de item atingido");
+    setQtd(qtd - 1)
   }
   
   return (
@@ -32,7 +33,7 @@ export default function Contador(){
           </div>
     
           <div className="quantidade">
-            {contador}
+            {qtd}
           </div>
     
           <div className="mais" onClick={adicionar}>

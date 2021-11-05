@@ -6,7 +6,7 @@ export default function Cabecalho() {
         <CabecalhoDiv>
           
             <div class="logo">
-                <Link to='/home'>
+                <Link to='/'>
                 <img src="../../assets/images/logo.svg" alt=""/>
                 </Link>
             </div>
