@@ -74,7 +74,7 @@ export default function Login() {
 
                     <div class="reg-conta">
                         <div class="registrar"> 
-                        <Link to="/registrar">Rejistre-se</Link> 
+                        <Link to="/registrar">Registre-se</Link> 
                         </div>
                     </div>
                 </div>

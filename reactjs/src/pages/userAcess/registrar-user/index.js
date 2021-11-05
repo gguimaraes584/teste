@@ -1,5 +1,6 @@
 import Cabecalho from "../../../components/cabecalho";
 import { Container } from "./styled";
+import {Link} from 'react-router-dom';
 
 export default function registrarUser(){
     return(
@@ -8,7 +9,7 @@ export default function registrarUser(){
         
         <div class="conteudo-reg">
             <div class="box-reg">
-                <div class="reg-titulo">Rejistrar</div>
+                <div class="reg-titulo">Registrar</div>
                 <div class="reg-campos">
                     <div class="reg-campotitulo">E-Mail:</div>
                     <div class="reg-campos-input">
@@ -35,10 +36,11 @@ export default function registrarUser(){
                         <input type="password">
                     </input>
                 </div>
-                <div class="reg-a"> Rejistrar
+                <div class="reg-a"> Registrar
                 </div>
                 <div class="reg-conta">
-                    <div class="a"> Já Possuo Conta | Fazer Login
+                    <div class="a"> 
+                        <Link to='/login'>Já Possuo Conta | Fazer Login</Link>
                     </div>
                 </div>
 
