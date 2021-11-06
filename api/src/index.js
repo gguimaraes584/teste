@@ -57,7 +57,47 @@ function getRandomIntereger(min, max){
 }
 
 
+app.post('/validarCodigo', async (req, resp) => {
+    const user = await db.infoa_dtn_tb_cliente.findOne({
+        where: {
+            ds_email: req.body.email
+        }
+    });
+    if(!user) {
+        resp.send( {status: 'erro', mensagem: 'Email Inválido'});
+    }
+    if(user.ds_codigo_rec !== req.body.codigo) {
+        resp.send({ status: 'erro', mensagem: 'cógigo inválido'})
+    }
+    resp.send({ status: 'ok', mensagem: 'Código Validado'});
+})
 
+
+
+app.put('/resetSenha', async (req, resp) => {
+    const user = await db.infoa_dtn_tb_cliente.findOne({
+        where: {
+            ds_email: req.body.email
+        }
+    });
+    if(!user) {
+        resp.send( {status: 'erro', mensagem: 'Email Inválido'});
+    }
+    if(user.ds_codigo_rec !== req.body.codigo) {
+        resp.send({ status: 'erro', mensagem: 'código inválido'})
+    }
+
+    await db.infoa_dtn_tb_cliente.update({
+
+    }, {
+        ds_senha: req.body.novaSenha 
+    }, {
+        where: {  nm_cliente: user.nm_cliente }
+    })
+    resp.send({ status: 'ok', mensagem: 'A senha foi alterada'})
+    
+})
+    
 
 
 

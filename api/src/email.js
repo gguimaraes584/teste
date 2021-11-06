@@ -1,12 +1,12 @@
 import nodemailer from 'nodemailer';
 
 const sender = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
+    host: "smtp.mailtrap.io",
+    port: 2525,
     secure: false,
     auth: {
-        user: 'mailing.tcc.info@acaonsfatima.org.br',
-        pass: 'mailing#tcc',
+        user: 'da88609faee084',
+        pass: '68707b0056e99d',
     },
 
 });
