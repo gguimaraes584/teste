@@ -27,6 +27,7 @@ import _infoa_gab_venda from  "./infoa_gab_venda.js";
 import _infoa_gab_venda_item from  "./infoa_gab_venda_item.js";
 import _infoa_sti_categoria from  "./infoa_sti_categoria.js";
 import _infoa_sti_cliente from  "./infoa_sti_cliente.js";
+import _infoa_sti_cupom from  "./infoa_sti_cupom.js";
 import _infoa_sti_endereco from  "./infoa_sti_endereco.js";
 import _infoa_sti_produto from  "./infoa_sti_produto.js";
 import _infoa_sti_venda from  "./infoa_sti_venda.js";
@@ -129,6 +130,7 @@ import _infod_omn_vaga from  "./infod_omn_vaga.js";
 import _infod_ssc_adm from  "./infod_ssc_adm.js";
 import _infod_ssc_cliente from  "./infod_ssc_cliente.js";
 import _infod_ssc_endereco from  "./infod_ssc_endereco.js";
+import _infod_ssc_favoritos from  "./infod_ssc_favoritos.js";
 import _infod_ssc_item from  "./infod_ssc_item.js";
 import _infod_ssc_pedido from  "./infod_ssc_pedido.js";
 import _infod_ssc_produto from  "./infod_ssc_produto.js";
@@ -181,6 +183,7 @@ export default function initModels(sequelize) {
   const infoa_gab_venda_item = _infoa_gab_venda_item.init(sequelize, DataTypes);
   const infoa_sti_categoria = _infoa_sti_categoria.init(sequelize, DataTypes);
   const infoa_sti_cliente = _infoa_sti_cliente.init(sequelize, DataTypes);
+  const infoa_sti_cupom = _infoa_sti_cupom.init(sequelize, DataTypes);
   const infoa_sti_endereco = _infoa_sti_endereco.init(sequelize, DataTypes);
   const infoa_sti_produto = _infoa_sti_produto.init(sequelize, DataTypes);
   const infoa_sti_venda = _infoa_sti_venda.init(sequelize, DataTypes);
@@ -283,6 +286,7 @@ export default function initModels(sequelize) {
   const infod_ssc_adm = _infod_ssc_adm.init(sequelize, DataTypes);
   const infod_ssc_cliente = _infod_ssc_cliente.init(sequelize, DataTypes);
   const infod_ssc_endereco = _infod_ssc_endereco.init(sequelize, DataTypes);
+  const infod_ssc_favoritos = _infod_ssc_favoritos.init(sequelize, DataTypes);
   const infod_ssc_item = _infod_ssc_item.init(sequelize, DataTypes);
   const infod_ssc_pedido = _infod_ssc_pedido.init(sequelize, DataTypes);
   const infod_ssc_produto = _infod_ssc_produto.init(sequelize, DataTypes);
@@ -463,6 +467,8 @@ export default function initModels(sequelize) {
   infod_leo_servico.hasMany(infod_leo_agendamento, { as: "infod_leo_agendamentos", foreignKey: "id_servico"});
   infod_leo_servico_imagem.belongsTo(infod_leo_servico, { as: "id_servico_infod_leo_servico", foreignKey: "id_servico"});
   infod_leo_servico.hasMany(infod_leo_servico_imagem, { as: "infod_leo_servico_imagems", foreignKey: "id_servico"});
+  infod_ssc_favoritos.belongsTo(infod_ssc_cliente, { as: "id_cliente_infod_ssc_cliente", foreignKey: "id_cliente"});
+  infod_ssc_cliente.hasMany(infod_ssc_favoritos, { as: "infod_ssc_favoritos", foreignKey: "id_cliente"});
   infod_ssc_venda.belongsTo(infod_ssc_cliente, { as: "id_cliente_infod_ssc_cliente", foreignKey: "id_cliente"});
   infod_ssc_cliente.hasMany(infod_ssc_venda, { as: "infod_ssc_vendas", foreignKey: "id_cliente"});
   infod_ssc_cliente.belongsTo(infod_ssc_endereco, { as: "id_endereco_infod_ssc_endereco", foreignKey: "id_endereco"});
@@ -471,6 +477,8 @@ export default function initModels(sequelize) {
   infod_ssc_endereco.hasMany(infod_ssc_venda, { as: "infod_ssc_vendas", foreignKey: "id_endereco_entrega"});
   infod_ssc_pedido.belongsTo(infod_ssc_item, { as: "id_item_infod_ssc_item", foreignKey: "id_item"});
   infod_ssc_item.hasMany(infod_ssc_pedido, { as: "infod_ssc_pedidos", foreignKey: "id_item"});
+  infod_ssc_favoritos.belongsTo(infod_ssc_produto, { as: "id_produto_infod_ssc_produto", foreignKey: "id_produto"});
+  infod_ssc_produto.hasMany(infod_ssc_favoritos, { as: "infod_ssc_favoritos", foreignKey: "id_produto"});
   infod_ssc_item.belongsTo(infod_ssc_produto, { as: "id_produto_infod_ssc_produto", foreignKey: "id_produto"});
   infod_ssc_produto.hasMany(infod_ssc_item, { as: "infod_ssc_items", foreignKey: "id_produto"});
   infod_ssc_pedido.belongsTo(infod_ssc_venda, { as: "id_venda_infod_ssc_venda", foreignKey: "id_venda"});
@@ -508,6 +516,7 @@ export default function initModels(sequelize) {
     infoa_gab_venda_item,
     infoa_sti_categoria,
     infoa_sti_cliente,
+    infoa_sti_cupom,
     infoa_sti_endereco,
     infoa_sti_produto,
     infoa_sti_venda,
@@ -610,6 +619,7 @@ export default function initModels(sequelize) {
     infod_ssc_adm,
     infod_ssc_cliente,
     infod_ssc_endereco,
+    infod_ssc_favoritos,
     infod_ssc_item,
     infod_ssc_pedido,
     infod_ssc_produto,

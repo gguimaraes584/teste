@@ -2,6 +2,7 @@ import db from './db.js'
 import express from 'express'
 import cors from 'cors'
 import Sequelize from 'sequelize';
+import enviarEmail from "./email.js";
 
 const { op, col, fn } = Sequelize;
 
@@ -10,23 +11,64 @@ app.use(cors());
 app.use(express.json());
 
 
-
 app.post('/login', async(req, resp) => {
-    let login = req.body;
+    const user = await db.infoa_dtn_tb_cliente.findOne({
+        where: {
+            ds_email: req.body.email,
+            ds_senha: req.body.senha
+        }
+    })
+    if (!user) {
+        resp.send({status: 'erro', mensagem: 'Credenciais Inválidas'});
+    } else 
+        resp.send({status: 'ok', nome: user.nm_cliente});
+        
+})
 
-    let r = await db.infoa_dtn_tb_cliente.findOne(
-        {
-            where: {
-                ds_email: login.usuario,
-                ds_senha: login.senha
 
-            }
-        })
-        if(r == null)
-        return resp.send({ erro: 'Credenciais Inválidas'});
+app.post('/esqueciASenha', async(req, resp) => {
+    const user = await db.infoa_dtn_tb_cliente.findOne({
+        where: {
+            ds_email: req.body.email
+        }
+    });
 
-        resp.sendStatus(200);
-});
+    if(!user) {
+        return resp.send({ erro: 'E-mail Inválido'});
+    }
+    let code = getRandomIntereger(1000, 9999);
+    await db.infoa_dtn_tb_cliente.update({
+        ds_codigo_rec: code
+
+    }, {
+        where: {id_cliente: user.id_cliente}
+    })
+    enviarEmail(user.ds_email, 'Recuperação de E-mail', `
+        <h3> Recuperação de Senha </h3>
+        <p> Você solicitou a recuperação de sua senha no site Destiny. </p>
+        <p> Entre com o código ${code} para prosseguir com a recuperação.
+    `)
+        resp.send({ status: 'ok'})
+})
+
+
+function getRandomIntereger(min, max){
+    return Math.floor(Math.random() * (max - min) + min );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get('/login', async(req, resp) => {
     let login = req.body;
