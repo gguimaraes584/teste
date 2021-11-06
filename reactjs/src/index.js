@@ -9,4 +9,5 @@ ReactDOM.render(
     <Index/>
   </React.StrictMode>,
   document.getElementById('root')
+  
 );
