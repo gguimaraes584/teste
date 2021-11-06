@@ -10,6 +10,7 @@ export default function Cabecalho() {
                 <img src="../../assets/images/logo.svg" alt=""/>
                 </Link>
             </div>
+            <div> </div>
             <div class="menu">
                 <div class="menu-item"><Link to='/produtos'> Todos os produtos</Link></div>
                 <div class="menu-item"><Link to='/produtos/femininos'> Feminino</Link></div>
